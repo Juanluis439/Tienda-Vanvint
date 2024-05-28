@@ -1,24 +1,24 @@
 const productNames = [
-    "img1.jpeg",
-    "img10.jpeg",
-    "img11.jpeg",
-    "img12.jpeg",
-    "img13.jpeg",
-    "img14.jpeg",
-    "img15.jpeg",
-    "img16.jpeg",
-    "img17.jpeg",
-    "img18.jpeg",
-    "img19.jpeg",
-    "img2.jpeg",
-    "img20.jpeg",
-    "img3.jpeg",
-    "img4.jpeg",
-    "img5.jpeg",
-    "img6.jpeg",
-    "img7.jpeg",
-    "img8.jpeg",
-    "img9.jpeg"
+    { index: 0, name: "anello lexa", price: "€9,50", img:"img1.jpeg" },
+    { index: 1, name: "anello Summer", price: "€8,50", img:"img10.jpeg" },
+    { index: 2, name: "Orecchini Lea, Nerlin", price: "€8", img: "img11.jpeg" },
+    { index: 3, name: "anello lexa", price: "€8,50", img: "img12.jpeg" },
+    { index: 4, name: "anello lexa", price: "€8", img: "img13.jpeg" },
+    { index: 5, name: "anello lexa", price: "€8", img: "img14.jpeg" },
+    { index: 6, name: "anello lexa", price: "€8", img: "img15.jpeg" },
+    { index: 7, name: "anello lexa", price: "€8", img: "img16.jpeg" },
+    { index: 8, name: "anello lexa", price: "€8", img: "img17.jpeg" },
+    { index: 9, name: "anello lexa", price: "€8", img: "img18.jpeg" },
+    { index: 10, name: "anello lexa", price: "€8", img: "img19.jpeg" },
+    { index: 11, name: "anello lexa", price: "€8", img: "img2.jpeg" },
+    { index: 12, name: "anello lexa", price: "€8", img: "img20.jpeg" },
+    { index: 13, name: "anello lexa", price: "€8", img: "img3.jpeg"} ,
+    { index: 14, name: "anello lexa", price: "€8", img: "img4.jpeg"} ,
+    { index: 15, name: "anello lexa", price: "€8", img: "img5.jpeg"} ,
+    { index: 16, name: "anello lexa", price: "€8", img: "img6.jpeg"} ,
+    { index: 17, name: "anello lexa", price: "€8", img: "img7.jpeg"} ,
+    { index: 18, name: "anello lexa", price: "€8", img: "img8.jpeg"} ,
+    { index: 19, name: "anello lexa", price: "€8", img: "img9.jpeg"} 
 ]
 
 /*
@@ -27,7 +27,7 @@ const productNames = [
 window.onload = function () {
 
     let listContainer = document.getElementById('swiper-wrapper');
-    productNames.map((productImagePath, index) => {
+    productNames.map((product, index) => {
         listContainer.insertAdjacentHTML('beforeend', `
         <div class="swiper-slide">
         <div class="icons">
@@ -37,16 +37,16 @@ window.onload = function () {
         </div>
         <div class="product-content">
             <div class="product-txt">
-                <span>€8</span>
-                <h3>Anello Lexa</h3>
+                <span>${product.price}</span>
+                <h3>${product.name}</h3>
                 <p>Anello in argento sterling 925 con zircone colorato blu. Misura: 7, Italiana 14</p>
             </div>
             <div class="product-img">
-                <img src="img-productos/${productImagePath}" alt="Producto 1">
+                <img src="img-productos/${product.img}" alt="Producto ${index + 1}">
             </div>
         </div>
         <div>
-            <a href="#" onclick="enviarWhatsApp('Anello Lexa')" class="btn-1">Comprar</a>
+            <a href="#" onclick="enviarWhatsApp('${product.name}')" class="btn-1">Acquistare</a>
         </div>
     </div>
         `)
