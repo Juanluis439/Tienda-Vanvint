@@ -17,13 +17,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="productos.css">
 </head>
 
 <body>
     <header>
         <nav class="nav">
             <div class="logo-and-buttons">
-                <img src="img-productos/logo.jpeg">
+                <img src="img-catalogo/logo.jpeg">
                 <ul class="nav-btn">
                     <li><a href="index.html"><button class="btn-header">Inicio</button></a></li>
                     <li><a href="productos.html"><button class="btn-header">Productos</button></a></li>
@@ -36,12 +37,12 @@
 
 
     <h2 class="text-center darkred">-Catálogo-</h2>
-    <div class="swiper myswiper">
-        <div class="swiper-wrapper" id="swiper-wrapper">
-            <!-- The products are being looped in the product js file -->
-
+    <div class="container">
+        <div class="product-list"></div>
+        
         </div>
-    </div>
+    
+    <script src="productos.js"></script>    
     <script src="./includes/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
@@ -62,8 +63,8 @@
         })
     </script>
 
-    <script src="vanvint.js"></script>
-    <script src="productos.js"></script>
+ <script src="vanvint.js"></script>
+
 </body>
 
 </html>
