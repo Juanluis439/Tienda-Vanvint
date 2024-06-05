@@ -1,6 +1,6 @@
 const articulosName = [
     { index: 0, name: "anello lexa", price: "€9,50", img: "img1.jpeg" },
-    { index: 1, name: "anello lexa", price: "€9,50", img: "img2.jpeg" },
+    { index: 1, name: "prueba", price: "€9,50", img: "img2.jpeg" },
     { index: 2, name: "anello lexa", price: "€9,50", img: "img3.jpeg" },
     { index: 3, name: "anello lexa", price: "€9,50", img: "img4.jpeg" },
     { index: 4, name: "anello lexa", price: "€9,50", img: "img5.jpeg" },
@@ -40,20 +40,20 @@ const articulosName = [
     { index: 38, name: "anello lexa", price: "€9,50", img: "img39.jpeg" },
     { index: 39, name: "anello lexa", price: "€9,50", img: "img40.jpeg" },   
     { index: 40, name: "anello lexa", price: "€9,50", img: "img41.jpeg" },
-    { index: 41, name: "anello lexa", price: "€9,50", img: "img42.jpeg" },
-    { index: 42, name: "anello lexa", price: "€9,50", img: "img43.jpeg" },
-    { index: 43, name: "anello lexa", price: "€9,50", img: "img44.jpeg" },
-    { index: 44, name: "anello lexa", price: "€9,50", img: "img45.jpeg" },
-    { index: 45, name: "anello lexa", price: "€9,50", img: "img46.jpeg" },
-    { index: 46, name: "anello lexa", price: "€9,50", img: "img47.jpeg" },
-    { index: 47, name: "anello lexa", price: "€9,50", img: "img48.jpeg" },
-    { index: 48, name: "anello lexa", price: "€9,50", img: "img49.jpeg" },
-    { index: 49, name: "anello lexa", price: "€9,50", img: "img50.jpeg" },
-    { index: 50, name: "anello lexa", price: "€9,50", img: "img51.jpeg" },
-    { index: 51, name: "anello lexa", price: "€9,50", img: "img52.jpeg" },
-    { index: 52, name: "anello lexa", price: "€9,50", img: "img53.jpeg" },
-    { index: 53, name: "anello lexa", price: "€9,50", img: "img54.jpeg" },
-    { index: 54, name: "anello lexa", price: "€9,50", img: "img55.jpeg" },
+    { index: 41, name: "Orechinni Amelia", price: "€7,50", img: "img42.jpeg" },
+    { index: 42, name: "Orecchini Rosa", price: "€9,50", img: "img43.jpeg" },
+    { index: 43, name: "Orechinni Aura", price: "€7,50", img: "img44.jpeg" },
+    { index: 44, name: "Anello Tiffany", price: "€8,00", img: "img45.jpeg" },
+    { index: 45, name: "Orechinni Lea", price: "€8,50", img: "img46.jpeg" },
+    { index: 46, name: "Anello Assia", price: "€9,50", img: "img47.jpeg" },
+    { index: 47, name: "Anello Snake", price: "€9,50", img: "img48.jpeg" },
+    { index: 48, name: "Punti Luce", price: "€6,50", img: "img49.jpeg" },
+    { index: 49, name: "Anello Anabel", price: "€9,50", img: "img50.jpeg" },
+    { index: 50, name: "Orecchini Drop", price: "€9,00", img: "img51.jpeg" },
+    { index: 51, name: "Anello Maria", price: "€9,90", img: "img52.jpeg" },
+    { index: 52, name: "Anello Isabel", price: "€9,50", img: "img53.jpeg" },
+    { index: 53, name: "Orechinni Ria", price: "€7,50", img: "img54.jpeg" },
+    { index: 54, name: "Anello Valery", price: "€9,50", img: "img55.jpeg" },
     { index: 55, name: "anello lexa", price: "€9,50", img: "img56.jpeg" },
     { index: 56, name: "anello lexa", price: "€9,50", img: "img57.jpeg" },
     { index: 57, name: "anello lexa", price: "€9,50", img: "img58.jpeg" },
@@ -62,24 +62,43 @@ const articulosName = [
 ];
 
 window.onload = function() {
-    let listContainer = document.querySelector(".product-list");
-    articulosName.forEach((articulo, index) => {
-        listContainer.insertAdjacentHTML('beforeend', `
-            <div class="product-card" onclick="toggleCard(this)">
-                <div class="front">
+    const resultContainer = document.getElementById("resultadoContainer");
+    const searchInput = document.getElementById("buscador");
+
+    function renderResults(results) {
+        resultContainer.innerHTML = '';
+        results.forEach((articulo, index) => {
+            resultContainer.insertAdjacentHTML('beforeend', `<div class="card-container">
+                <div class="card">
                     <img src="img-productos/${articulo.img}" alt="Articulo ${index + 1}">
-                    <h2>${articulo.name}</h2>
                 </div>
-                <div class="back">
-                    <p>Precio: ${articulo.price}</p>
-                    <button>Comprar</button>
+                <div class="info-card">
+                    <div>
+                        <h2>${articulo.name}</h2>
+                    </div>
+                    <div>
+                        <p>${articulo.price}</p>
+                    </div>
+                    <div>
+                        <button>Comprar</button>
+                    </div>
                 </div>
-            </div>
-        `);
-    });
-}
+            </div>`);
+        });
+    }
+
+    function filterResults() {
+        const query = buscador.value.toLowerCase();
+        const filteredResults = articulosName.filter(articulo => articulo.name.toLowerCase().includes(query));
+        renderResults(filteredResults);
+    }
+
+    buscador.addEventListener('input', filterResults);
+
+    // Render all items initially
+    renderResults(articulosName);
+};
 
 function toggleCard(card) {
     card.classList.toggle('flipped');
 }
-
