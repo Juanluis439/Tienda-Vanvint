@@ -138,6 +138,7 @@ p {
     justify-content: space-between;
     width: 100%;
     flex-direction: column;
+    background-color: #000;
     }
 
     .nav-btn {
