@@ -89,40 +89,18 @@ html, body {
 }
 
 
-@media (max-width: 600px) {
+@media (min-width: 601px) {
     .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .logo-and-buttons {
-        width: 100%;
-        justify-content: space-between;
+        flex-direction: row; /* Coloca los elementos en fila */
     }
 
-    .menu-icon {
-        display: block;
+    .logo-and-buttons {
+        flex-direction: row; /* Coloca los elementos en fila */
     }
 
     .nav-btn {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-    }
-
-    .nav-btn li {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-btn li a {
-        display: block;
-        width: 100%;
-    }
-
-    .nav-btn li a button {
-        width: 100%;
+        flex-direction: row; /* Coloca los botones en fila */
+        margin: 0; /* Remueve el margen superior */
+        gap: 15px; /* Ajusta el espacio entre botones */
     }
 }

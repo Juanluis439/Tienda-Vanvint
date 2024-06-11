@@ -111,10 +111,18 @@ p {
   padding: 5rem;
 }
 
-@media (max-width: 700px) {
-  nav ul li {
-      display: block;
-      margin: 0.5rem 0;
-      text-align: center;
+@media (min-width: 601px) {
+  .nav {
+      flex-direction: row; /* Coloca los elementos en fila */
+  }
+
+  .logo-and-buttons {
+      flex-direction: row; /* Coloca los elementos en fila */
+  }
+
+  .nav-btn {
+      flex-direction: row; /* Coloca los botones en fila */
+      margin: 0; /* Remueve el margen superior */
+      gap: 15px; /* Ajusta el espacio entre botones */
   }
 }
