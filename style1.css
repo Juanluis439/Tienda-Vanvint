@@ -93,9 +93,7 @@ header {
     font-size: 10rem;
     overflow-wrap:break-word;
 }
-h1, h2{
-    font-family: "Playfair Display", serif;
-}
+
 .btn-outline-danger{
     --bs-btn-color: #a0153e;
     --bs-btn-border-color: #a0153e;
@@ -114,4 +112,26 @@ h1, h2{
 }
 .spacer{
     padding: 7rem;
+}
+
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+h1{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
+h2{
+    font-family: "Playfair Display", serif;
+}
+
+p {
+    font-size: 48px;
 }

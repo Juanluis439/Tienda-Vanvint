@@ -466,3 +466,10 @@ h2{
 
 
 
+@media (max-width: 600px) {
+  nav ul li {
+      display: block;
+      margin: 0.5rem 0;
+      text-align: center;
+  }
+}
