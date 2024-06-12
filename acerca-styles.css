@@ -111,18 +111,18 @@ p {
   padding: 5rem;
 }
 
-@media (min-width: 601px) {
+@media (max-width: 601px) {
   .nav {
       flex-direction: row; /* Coloca los elementos en fila */
   }
 
   .logo-and-buttons {
-    display: flex;
-align-items: center;
-justify-content: space-between;
-width: 100%;
-flex-direction: column;
-}
+      display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+  }
 
   .nav-btn {
       flex-direction: row; /* Coloca los botones en fila */
