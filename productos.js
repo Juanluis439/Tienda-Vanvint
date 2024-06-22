@@ -35,10 +35,12 @@ const articulosName = [
     { index: 37, name: "Collana e bracciale Aida", price: "€12,00", img: "img38.jpeg" },
     { index: 38, name: "Orecchini Elisabeth", price: "€9,00", img: "img39.jpeg" },
     { index: 39, name: "Orecchino Flora", price: "€12,00", img: "img40.jpeg" },
-    { index: 54, name: "Anello Valery", price: "€9,50", img: "img55.png" },
+    { index: 54, name: "Anello Valery", price: "€12,00", img: "img55.png" },
     { index: 55, name: "Anello Lara", price: "€9,50", img: "img56.png" },
     { index: 57, name: "Anello Alma", price: "€9,50", img: "img58.png" },
-    { index: 58, name: "Anello Aitana", price: "€9,50", img: "img59.png" }
+    { index: 58, name: "Anello Aitana", price: "€12,00", img: "img59.png" },
+    { index: 58, name: "Anello Vivían", price: "€9,90", img: "img60.png" },
+    { index: 58, name: "Anello Shine", price: "€11,00", img: "img61.jpeg" }
 ];
 
 window.onload = function() {
