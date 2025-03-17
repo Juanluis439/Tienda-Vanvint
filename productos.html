@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>VANVINT Jewelry Store</title>
     <link
       rel="stylesheet"
@@ -44,8 +44,7 @@
             </li>
             <li>
               <a href="productos.html"
-                ><button class="btn-header">
-                  Prodotti</button></a
+                ><button class="btn-header">Prodotti</button></a
               >
             </li>
             <li>
@@ -63,21 +62,25 @@
       </nav>
       <div class="w-100 row">
         <div class="col-6"></div>
-        <div class="col-6 d-flex">
-            <input type="text" id="buscador" placeholder="Cerca articolo" />
-        </div>
+        <div class="col-6 d-flex"></div>
       </div>
     </header>
 
     <h2 class="text-center darkred">-Catalogare-</h2>
 
-    <div>
-      <button onclick="filtrarObjetos('anello')">Anello</button>
-      <button onclick="filtrarObjetos('orechinni')">Orechinni</button>
-      <button onclick="filtrarObjetos('collana')">Collana</button>
-      <button onclick="filtrarObjetos('')">Todos</button>
-  </div>
-  <div id="resultados"></div>
+    <div id="menu-container">
+      <button onclick="filtrarObjetos('anello')" class="btn-menu">
+        Anello
+      </button>
+      <button onclick="filtrarObjetos('orechinni')" class="btn-menu">
+        Orechinni
+      </button>
+      <button onclick="filtrarObjetos('collana')" class="btn-menu">
+        Collana
+      </button>
+      <button onclick="filtrarObjetos('')" class="btn-menu">Todos</button>
+    </div>
+    <div id="resultados"></div>
 
     <div class="product-list" id="resultadoContainer"></div>
 
@@ -85,11 +88,11 @@
     <script src="./includes/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-      var swiper = new Swiper('.myswiper', {
-        effect: 'coverflow',
+      var swiper = new Swiper(".myswiper", {
+        effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
         loop: false,
         coverflowEffect: {
           depth: 500,
