@@ -18,7 +18,18 @@
     <header>
         <nav class="nav">
         <div class="logo-and-buttons">
-            <img src="img-catalogo/logo.png" >
+            <img src="img-new/logo.png" >
+            <div class="icono-carrito" onclick="mostrarCarrito()">🛒
+                <span id="notificacionCarrito" class="notificacion" style="display: none;">0</span>
+            </div>
+    <div class="modal-carrito" id="modalCarrito" onclick="cerrarCarrito(event)">
+      <div class="carrito-container" onclick="event.stopPropagation()">
+        <span class="cerrar-carrito" onclick="cerrarCarrito(event)">✖</span>
+        <h2>CARRELLO</h2>
+        <div id="productosCarrito"></div>
+        <button onclick="enviarWhatsApp('${product.name}')" class="btn-comprar">Acquistare</button>
+        </div>
+      </div>
             <ul class="nav-btn">
                 <li><a href="index.html"><button class="btn-header">Inizio</button></a></li>
                 <li><a href="productos.html"><button class="btn-header">Prodotti</button></a></li>
@@ -29,7 +40,7 @@
         </nav>
         
                 <div class="textCenter">
-                    <h1>Cómpralo, i soldi vanno e vengono.</h1>
+                    <h1>Compralo, i soldi vanno e vengono.</h1>
                 </div>
                 
            
@@ -53,13 +64,15 @@
     </main>
 <div class="spacer"></div>
 
-<h2 class="text-center darkred">-Catálogo-</h2>
+<h2 class="text-center darkred">-Catalogo-</h2>
     <div class="swiper myswiper">
         <div class="swiper-wrapper" id="swiper-wrapper">
             <!-- The products are being looped in the product js file -->
 
         </div>
     </div>
+
+    <div class="contenedor-seccion" id="contenedor-seccion"></div>
     
     <script src="./includes/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

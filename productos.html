@@ -35,7 +35,35 @@
     <header>
       <nav class="nav">
         <div class="logo-and-buttons">
-          <img src="img-catalogo/logo.png" />
+          <img src="img-new/logo.png" />
+          <div class="icono-carrito" onclick="mostrarCarrito()">
+            🛒
+            <span
+              id="notificacionCarrito"
+              class="notificacion"
+              style="display: none"
+              >0</span
+            >
+          </div>
+          <div
+            class="modal-carrito"
+            id="modalCarrito"
+            onclick="cerrarCarrito(event)"
+          >
+            <div class="carrito-container" onclick="event.stopPropagation()">
+              <span class="cerrar-carrito" onclick="cerrarCarrito(event)"
+                >✖</span
+              >
+              <h2>CARRITO DE COMPRAS</h2>
+              <div id="productosCarrito"></div>
+              <button
+                onclick="enviarWhatsApp('${product.name}')"
+                class="btn-comprar"
+              >
+                Acquistare
+              </button>
+            </div>
+          </div>
           <ul class="nav-btn">
             <li>
               <a href="index.html"
@@ -66,23 +94,69 @@
       </div>
     </header>
 
-    <h2 class="text-center darkred">-Catalogare-</h2>
+    <h2 class="text-center darkred">-Catalogo-</h2>
 
     <div id="menu-container">
-      <button onclick="filtrarObjetos('anello')" class="btn-menu">
-        Anello
+      <button
+        class="btn-menu"
+        data-categoria="anello"
+        onclick="filtrarObjetos('anello')"
+      >
+        Anelli
       </button>
-      <button onclick="filtrarObjetos('orechinni')" class="btn-menu">
-        Orechinni
+      <button
+        class="btn-menu"
+        data-categoria="orechinni"
+        onclick="filtrarObjetos('orecchini')"
+      >
+        Orecchini
       </button>
-      <button onclick="filtrarObjetos('collana')" class="btn-menu">
-        Collana
+      <button
+        class="btn-menu"
+        data-categoria="collana"
+        onclick="filtrarObjetos('collana')"
+      >
+        Collane
       </button>
-      <button onclick="filtrarObjetos('')" class="btn-menu">Todos</button>
+      <button class="btn-menu" onclick="filtrarObjetos('')">Tutti</button>
     </div>
     <div id="resultados"></div>
 
     <div class="product-list" id="resultadoContainer"></div>
+
+    <script>
+      function filtrarObjetos(categoria) {
+        document.getElementById("resultadoContainer").innerHTML = `Mostrando ${
+          categoria || "todos"
+        }`;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Esperar a que todos los elementos existan antes de ejecutar el script
+        setTimeout(() => {
+          const params = new URLSearchParams(window.location.search);
+          const categoria = params.get("categoria");
+
+          if (categoria) {
+            console.log(`Detectada categoría en URL: ${categoria}`);
+
+            // Buscar el botón con la categoría y simular un clic
+            const boton = document.querySelector(
+              `[data-categoria="${categoria}"]`
+            );
+            if (boton) {
+              console.log("Botón encontrado:", boton);
+              boton.click(); // Simula el clic en el botón para activar la categoría
+            } else {
+              console.log(
+                "No se encontró el botón para la categoría:",
+                categoria
+              );
+            }
+          }
+        }, 100); // Retraso pequeño para asegurar que todo el DOM está cargado
+      });
+    </script>
 
     <script src="productos.js"></script>
     <script src="./includes/bootstrap/js/bootstrap.min.js"></script>
@@ -105,5 +179,6 @@
     </script>
 
     <script src="vanvint.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

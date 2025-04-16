@@ -1,87 +1,80 @@
 const articulosName = [
-  { index: 0, name: "anello lexa", price: "€9,50", img: "img1.png" },
-  { index: 1, name: "Orecchini Rosa", price: "€9,50", img: "img2.png" },
-  { index: 2, name: "Anello Talia", price: "€8,00", img: "img3.png" },
-  { index: 3, name: "Orechinni Amelia", price: "€7,50", img: "img4.png" },
-  { index: 4, name: "Anello Tiffany", price: "€8,00", img: "img5.jpeg" },
-  { index: 7, name: "Anello Miride", price: "€9,50", img: "img8.png" },
-  { index: 8, name: "Orecchini Hoop Lisa", price: "€8,50", img: "img9.jpeg" },
-  { index: 9, name: "Orecchini Hoop Daría", price: "€10,00", img: "img10.png" },
-  { index: 10, name: "Orecchini Gaia", price: "€11,00", img: "img11.jpeg" },
-  { index: 11, name: "Orechinni Aura", price: "€7,50", img: "img12.png" },
-  { index: 12, name: "Orecchini Ros", price: "€8,00", img: "img13.png" },
-  { index: 13, name: "Anello Vinz", price: "€7,00", img: "img14.jpeg" },
-  { index: 14, name: "Punti Luce", price: "€6,50", img: "img15.png" },
-  { index: 15, name: "Anello Assia", price: "€9,50", img: "img16.png" },
+  { index: 0, name: "Anello Lexa", price: "13.90", img: "img1.jpg" },
+  { index: 1, name: "Anello Daris", price: "14.00", img: "img2.jpg" },
+  { index: 2, name: "Anello Maria", price: "13.90", img: "img3.jpg" },
+  { index: 3, name: "Anello Anabel", price: "13.90", img: "img4.jpg" },
+  { index: 4, name: "Anello Snake", price: "13.90", img: "img5.jpg" },
+  { index: 5, name: "Anello Infinity", price: "12.90", img: "img6.jpg" },
+  { index: 6, name: "Anello Susan", price: "14.90", img: "img7.jpg" },
+  { index: 7, name: "Anello Valery", price: "10.00", img: "img8.jpg" },
+  { index: 8, name: "Anello Andrea", price: "14.90", img: "img9.png" },
+  { index: 9, name: "Anello Mon Amour", price: "15.00", img: "img10.jpg" },
+  { index: 10, name: "Anello Double", price: "11.90", img: "img11.jpg" },
+  { index: 11, name: "Anello Isabel", price: "13.90", img: "img12.jpg" },
+  { index: 12, name: "Anello Vivian", price: "12.90", img: "img13.jpg" },
+  { index: 13, name: "Anello Briar", price: "12.00", img: "img14.jpg" },
+  { index: 14, name: "Anello Laura", price: "9.00", img: "img15.jpg" },
+  { index: 15, name: "Anello Assia", price: "€9,50", img: "img16.jpg" },
   {
     index: 16,
-    name: "Orechinni Drop clr oro",
-    price: "€9,00",
-    img: "img17.png",
+    name: "Orecchini Aura",
+    price: "10.00",
+    img: "img17.jpg",
   },
-  { index: 17, name: "Orechinni Drop", price: "€9,00", img: "img18.png" },
-  { index: 18, name: "Anello Coquette", price: "€9,90", img: "img19.png" },
-  { index: 19, name: "Anello Mon amour", price: "€11,00", img: "img57.png" },
-  { index: 20, name: "Anello Snake", price: "€9,50", img: "img21.png" },
-  { index: 21, name: "Anello Isabel", price: "€9,50", img: "img22.png" },
-  { index: 22, name: "Anello Anabel", price: "€9,50", img: "img23.png" },
-  { index: 23, name: "Anello Fede", price: "€4,50", img: "img24.jpeg" },
-  { index: 24, name: "Orecchini Lea", price: "€8,50", img: "img25.png" },
-  { index: 26, name: "Anello Daris", price: "€10,00", img: "img27.png" },
-  { index: 28, name: "Anello Maria", price: "€9,50", img: "img29.png" },
-  { index: 29, name: "anello lexa", price: "€9,50", img: "img30.png" },
-  { index: 30, name: "Orecchini Melita", price: "€7,00", img: "img31.jpeg" },
-  { index: 31, name: "Bracciale Aurora", price: "€10,00", img: "img32.jpeg" },
-  { index: 32, name: "Anello infinity", price: "€8,50", img: "img33.jpeg" },
-  { index: 33, name: "Cuban Bracciale", price: "€8,50", img: "img34.jpeg" },
-  { index: 34, name: "Collana Heart", price: "€15,00", img: "img35.jpeg" },
-  { index: 35, name: "Orecchini Silvia", price: "€9,00", img: "img36.jpeg" },
-  { index: 36, name: "Anello Summer", price: "€8,50", img: "img37.jpeg" },
+  { index: 17, name: "Orecchini Amelia", price: "13.00", img: "img18.jpg" },
+  { index: 18, name: "Earcuff", price: "7.00", img: "img19.jpg" },
+  { index: 19, name: "Piercing cerchietto", price: "5.00", img: "img20.jpg" },
+  { index: 20, name: "Bracciale Aurora", price: "14.86", img: "img21.png" },
+  { index: 21, name: "Orecchini Ros", price: "12.90", img: "img22.png" },
+  { index: 22, name: "Orecchini Drop", price: "10.90", img: "img23.jpg" },
+  { index: 23, name: "Orecchini Saliscendi", price: "12.00", img: "img24.jpg" },
+  { index: 24, name: "Orecchini Ámbar", price: "12.50", img: "img25.jpg" },
+  { index: 25, name: "Piercing Flower", price: "7.00", img: "img26.jpg" },
+  { index: 26, name: "Piercing Aila", price: "6.50", img: "img27.jpg" },
+  { index: 27, name: "Orecchini Laura", price: "10.90", img: "img29.jpg" },
+  { index: 28, name: "Orecchini Nadette", price: "10.90", img: "img30.jpg" },
   {
-    index: 37,
-    name: "Collana e bracciale Aida",
-    price: "€12,00",
-    img: "img38.jpeg",
+    index: 29,
+    name: "Earcuff orecchio completo",
+    price: "14.99",
+    img: "img31.jpg",
   },
-  { index: 38, name: "Orecchini Elisabeth", price: "€9,00", img: "img39.jpeg" },
-  { index: 39, name: "Orecchino Flora", price: "€12,00", img: "img40.jpeg" },
-  { index: 54, name: "Anello Valery", price: "€12,00", img: "img55.png" },
-  { index: 55, name: "Anello Lara", price: "€9,50", img: "img56.png" },
-  { index: 57, name: "Anello Alma", price: "€9,50", img: "img58.png" },
-  { index: 58, name: "Anello Aitana", price: "€12,00", img: "img59.png" },
-  { index: 58, name: "Anello Vivían", price: "€9,90", img: "img60.png" },
-  { index: 58, name: "Anello Shine", price: "€11,00", img: "img61.jpeg" },
+  { index: 30, name: "Earcuff Coquette", price: "14.99", img: "img32.jpg" },
+  { index: 31, name: "Orecchini Nerlin", price: "12.00", img: "img33.jpg" },
+  { index: 32, name: "Orecchini Drop", price: "10.00", img: "img34.jpg" },
+  { index: 33, name: "Orecchini Rosa", price: "14.00", img: "img35.jpg" },
+  { index: 34, name: "Orecchini Delia", price: "10.00", img: "img36.jpg" },
+  { index: 35, name: "Anello Summer", price: "€8,50", img: "img37.jpg" },
+  {
+    index: 36,
+    name: "Orecchini Melita",
+    price: "12.50",
+    img: "img38.jpg",
+  },
+  { index: 37, name: "Punti luce", price: "7.00", img: "img39.jpg" },
+  { index: 38, name: "Orecchino Flora", price: "14.00", img: "img40.jpg" },
 ];
 
 const resultContainer = document.getElementById("resultadoContainer");
 
 function renderResults(results) {
   resultContainer.innerHTML = "";
-  results.forEach((articulo, index) => {
+  results.forEach((articulo) => {
     resultContainer.insertAdjacentHTML(
       "beforeend",
-      `<div class="card-container">
-        <div class="card">
-          <img src="img-productos/${articulo.img}" alt="Articulo ${index + 1}">
-        </div>
-        <div class="info-card">
-          <div>
-            <h2>${articulo.name}</h2>
-          </div>
-          <div>
-            <p>${articulo.price}</p>
-          </div>
-          <div>
-            <a href="#" onclick="enviarWhatsApp('${
-              articulo.name
-            }')" class="btn-1">Acquistare</a>
-          </div>
-        </div>
-      </div>`
+      `<div class="card">
+  <img src="img-new/${articulo.img}" alt="${articulo.name}">
+  
+  <div class="info-card">
+    <h2>${articulo.name}</h2>
+    <p class="precio">${articulo.price}</p>
+    <a href="#" onclick="agregarAlCarrito('${articulo.name}', '${articulo.price}', '${articulo.img}'); return false;" class="btn">aggiungi al carrello</a>
+  </div>
+</div>
+`
     );
   });
 }
-
 function filtrarObjetos(categoria) {
   const categoriaFiltrada = categoria.toLowerCase();
   const filteredResults = articulosName.filter(
