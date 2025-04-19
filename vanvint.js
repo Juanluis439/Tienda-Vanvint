@@ -1,5 +1,5 @@
 function enviarWhatsApp() {
-  const telefono = "+393409691101"; // Número sin 'wa.me/'
+  const telefono = "393409691101"; // Número sin 'wa.me/'
 
   // Crear mensaje con la información del carrito
   let mensaje = "Ciao! Sono interessato ad acquistare i seguenti prodotti:\n\n";
@@ -16,5 +16,6 @@ function enviarWhatsApp() {
     "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
 
   // Redirigir al enlace de WhatsApp
-  window.location.href = enlaceWhatsApp;
+  //window.location.href = enlaceWhatsApp;
+  window.open(enlaceWhatsApp, "_blank");
 }
